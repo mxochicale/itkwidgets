@@ -1,10 +1,29 @@
+## Useful commands to manage your conda env:
+## LIST CONDA ENVS: conda list -n *VE # show list of installed packages
+## UPDATE CONDA: conda update -n base -c defaults conda
+## INSTALL CONDA EV: conda env create -f *VE.yml
+## UPDATE CONDA ENV: conda env update -f *VE.yml --prune
+## ACTIVATE CONDA ENV: conda activate *VE
+## REMOVE CONDA ENV: conda remove -n *VE --all
+
+## USAGE
+## conda activate itkwidgets
+
+## Setting up conda env
 name: itkwidgets
 channels:
   - conda-forge
 dependencies:
   - python=3.10
   - pip
-  - nodejs
   - pip:
     - itk>=5.3.0
     - itkwidgets[all]>=1.0a21
+    - nodejs
+    - nbmake
+    - jupyter 
+    - jupyter-server-proxy
+    - ipywidgets   
+    - notebook
+    - pooch
+    - tqdm
